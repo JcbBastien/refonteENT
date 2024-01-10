@@ -9,17 +9,17 @@
 <body>
     <header>
         <div id="header">
-            <a href="index.html"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
-            <a href="Profil.html"> <img src="img/person.svg" alt=""></a>
+            <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
+            <a href="Profil.php"> <img src="img/person.svg" alt=""></a>
         </div>
     </header>
 
     <nav>
         <div id="navbar">
-            <a href="index.html"><img src="img/home.png" alt="Accueil"></a>
-            <a href="Etudes.html"><img src="img/Gestion.png" alt="Gestion d'etude"></a>
-            <a href="Ressource.html"><img src="img/Ressource.png" alt="Ressource"></a>
-            <a href="VieEtudiante.html"><img src="img/VieEtudiante.png" alt="Vie Etudiant"></a>
+            <a href="index.php"><img src="img/home.png" alt="Accueil"></a>
+            <a href="Etudes.php"><img src="img/Gestion.png" alt="Gestion d'etude"></a>
+            <a href="Ressource.php"><img src="img/Ressource.png" alt="Ressource"></a>
+            <a href="VieEtudiante.php"><img src="img/VieEtudiante.png" alt="Vie Etudiant"></a>
         </div>
     </nav>
     
@@ -51,7 +51,7 @@
             </div>
 
             
-            <a href="Crous.html" class="buttBord">
+            <a href="Crous.php" class="buttBord">
                 <div>
                     <img src="img/restaurant.png" alt="">
                     <p>Menu crous</p>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="Crous.html" id="ButtPC">En savoir en plus  </a>
+                <a href="Crous.php" id="ButtPC">En savoir en plus  </a>
             </div>
 
 
@@ -156,7 +156,7 @@
                 </div>
             </div>
 
-            <a href="Notes.html" class="buttBord">
+            <a href="Notes.php" class="buttBord">
                 <div>
                     <img src="img/note.png" alt="">
                     <p>Mes notes</p>
@@ -188,7 +188,7 @@
                     <strong>12/20</strong>
                 </div>
             </div>
-            <div id="botBord"><a href="Notes.html" id="ButtPC">Voir mes notes</a></div>
+            <div id="botBord"><a href="Notes.php" id="ButtPC">Voir mes notes</a></div>
 
         </div>
 

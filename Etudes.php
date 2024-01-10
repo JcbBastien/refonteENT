@@ -9,8 +9,8 @@
 <body>
     <header>
         <div id="header">
-            <a href="index.html"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
-            <a href="Profil.html"> <img src="img/person.svg" alt=""></a>
+            <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
+            <a href="Profil.php"> <img src="img/person.svg" alt=""></a>
         </div>
     </header>
     <section id="Etudes">
@@ -20,7 +20,7 @@
             <div id="RondAbs" >
                 <p>10H</p>
             </div>
-            <a href="Absences.html" id="Butt">Mes absences</a>
+            <a href="Absences.php" id="Butt">Mes absences</a>
         </div>
         <div id="DevoirsEtu">
             <h2>MES DEVOIRS</h2>
@@ -41,16 +41,16 @@
                     <img src="img/statusDev.svg" alt="">
                 </div>
             </div>
-            <a href="Devoirs.html" id="Butt">Voir Plus</a>
+            <a href="Devoirs.php" id="Butt">Voir Plus</a>
         </div>
     </section>
     
     <nav>
         <div id="navbar">
-            <a href="index.html"><img src="img/home.png" alt="Accueil"></a>
-            <a href="Etudes.html"><img src="img/Gestion.png" alt="Gestion d'etude"></a>
-            <a href="Ressource.html"><img src="img/Ressource.png" alt="Ressource"></a>
-            <a href="VieEtudiante.html"><img src="img/VieEtudiante.png" alt="Vie Etudiant"></a>
+            <a href="index.php"><img src="img/home.png" alt="Accueil"></a>
+            <a href="Etudes.php"><img src="img/Gestion.png" alt="Gestion d'etude"></a>
+            <a href="Ressource.php"><img src="img/Ressource.png" alt="Ressource"></a>
+            <a href="VieEtudiante.php"><img src="img/VieEtudiante.png" alt="Vie Etudiant"></a>
         </div>
     </nav>
     
