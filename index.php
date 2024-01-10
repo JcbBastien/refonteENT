@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Tableau de bord</title>
 </head>
 <body>
+    <header>
+        <div id="header">
+            <a href="#"><img src="img/logoEiffel.png" alt="Retour a l'accueil"></a>
+            <a href="#"> <img src="img/person.png" alt=""></a>
+        </div>
+    </header>
     
 </body>
 </html>

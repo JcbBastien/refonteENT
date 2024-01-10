@@ -1,0 +1,963 @@
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("Font/Inter.ttf");
+}
+
+body{
+    background-image: url(img/background.png);
+    font-family: "Inter";
+    color: #394578;
+    margin: 0;
+}
+
+#navbar {
+    background-color: #4A5586;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+/* Accueil portable */
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    height: 5vh;
+    align-items: center;
+}
+
+#Tableau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.bord{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 30px;
+}
+
+.buttBord{
+    padding-top: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    background: #EFF3FD;
+        box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+        width: 165px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttBord:first-child img {
+        margin-left: 20px;
+    }
+    
+
+.buttBord p {
+    text-align: center;
+    font-weight: bold;
+    color: #394578;
+    text-transform: uppercase;
+}
+
+#Actu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+/* SLIDER */
+
+.slider {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.js-slider {
+width: 75vw;
+display: flex;
+align-items: center;
+overflow: hidden;
+border-radius: 30px;
+}
+
+.js-photos {
+    display: flex;
+    left: 0;
+    position: relative;
+    transition: left 0.6s ease-out;
+}
+
+
+.js-photo {
+    display: flex;
+}
+
+.js-photo img {
+    object-fit: cover; /* Recadrage pour couvrir tout le conteneur */
+    width: 100%; /* Pour s'assurer que l'image prend toute la largeur du conteneur */
+    height: 100%; /* Pour s'assurer que l'image prend toute la hauteur du conteneur */
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+}
+
+
+.js-navigation {
+    display: flex;
+transform: translate(-50%, -50%);
+}
+
+.js-btn-decale-droite,
+.js-btn-decale-gauche {
+
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: #4A5586;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+cursor: pointer;
+}
+
+.js-btn-decale-gauche {
+left: initial;
+right: 0;
+transform: rotate(180deg); /* Modification de la rotation pour pointer vers la droite */
+}
+
+.card-data{
+    background-color: white;
+    padding-left: 10px;
+}
+
+.arrow {
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #D9D9D9;
+    border-left: 1px solid #D9D9D9;
+    transform: rotate(-45deg);
+    position: relative;
+    left: 1px;
+}
+
+/*Accueil PC*/
+
+@media screen and (min-width: 651px) {
+}
+
+
+/*PROFIL PORTABLE*/
+
+#profil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Bio{
+    color: #EFF3FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background: #586492;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    width: 90vw;
+}
+
+#Bio img{
+    width: 50%;
+}
+
+#profilTXT{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profilTXT h2{
+    margin-top: 0;
+}
+
+#messageriePro{
+    display: flex;
+    margin-top: 10vh;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+
+#messageriePro    .buttBord:first-child img {
+    margin-left: 0px;
+}
+
+#Deconnexion{
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #586492;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    width: 45vw;
+    height: 3.5vh;
+}
+
+#Deconnexion p {
+    margin-left: 5px;
+}
+
+/* GESTION D'ETUDES */
+
+#Etudes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#NbAbs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+background: #EFF3FD;
+box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+#RondAbs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 27vh;
+    background-image: url(img/NbAbs.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 3rem;
+}
+
+#Butt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6CDFF;
+    text-decoration: none;
+    width: 35vw;
+    height: 3.5vh;
+    border-radius: 10px;
+    margin-bottom: 1.5vh;
+}
+
+#DevoirsEtu{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    width: 80vw;
+    height: 40vh;
+    margin-bottom: 10vh;
+}
+
+#DevoirStatus{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#DevoirContent{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Vie Etudiante */
+
+#sectionVie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#VieContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    width: 70vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 5vh;
+}
+
+#VieContent:last-child{
+    margin-bottom: 10vh;
+}
+
+#sectionVie h2{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+#VieContent img{
+    width: 100%;
+}
+
+#ticket{
+    color: white;
+    background-image: url(img/ticket.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#TicketTXT{
+    display: flex;
+}
+#TicketTXT p:nth-child(2) {
+    transform: rotate(90deg);
+    display: flex;
+}
+
+#VieContentPlan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    width: 70vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 5vh;
+    align-items: center;
+}
+
+/* PAGE RESSOURCE */
+
+#Ressource{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#protocole{
+    width: 90vw;
+}
+
+#protocoleContent{
+    display: flex;
+    align-items: center;
+}
+
+#protocoleTXT{
+    width: 70vw;
+    color: black;
+}
+
+#arrondis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    height: 3.5vh;
+    width: 17.5vw;
+}
+
+#emdash{
+    background-color: black;
+    width: 100%;
+    height: 1px;
+}
+
+#Cours{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding-bottom: 10vh;
+}
+
+#CoursContent{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 10px 10px 10px;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+#CoursHeader{
+    display: flex;
+    align-items: flex-start;
+}
+
+#CheaderTXT{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+#CheaderTXT p {
+    margin: 0;
+}
+
+h3{
+    font-size: 0.90em;
+    margin: 0;
+}
+
+#CoursStatues{
+    display: flex;
+    justify-content: space-between;
+}
+
+#CoursFichier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#CoursFichier #Butt{
+    width: 25vw;
+}
+
+/* Absences */
+
+#Absences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ABSContent{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+}
+
+#ABSContent img{
+    height: 5vh;
+}
+
+#ABSTXT{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#ABSJusti{
+    display: flex;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    width: 75vw;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 2vh;
+    border: none;
+}
+
+#emdash2{
+    background-color: black;
+    width: 60vw;
+    height: 1px;
+    margin-bottom: 3vh;
+}
+
+#detailsABS{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#RightABS{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#LeftABS{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+#NombreAbs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background: #EFF3FD;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10vh;
+}
+
+/*MES NOTES */
+
+#notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#notesDiv{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 1vh;
+}
+
+#notesHeader{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: #B6CDFF;
+    border-radius: 15px;
+    align-items: center;
+}
+
+#notesContent{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*CROUS*/
+
+#SectionCrous{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#SectionCrous h2{
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: black;
+}
+
+#Menu{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+#MenuCrous{
+    display: flex;
+    border-radius: 30px;
+    background: #EFF3FD;
+    height: 7vh;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    border: none;
+}
+
+#MenuCrous h3{
+    font-size: 1.25em;
+    margin: 0;
+    color: black;
+}
+
+#MenuTXT{
+    display: flex;
+    flex-direction: column;
+}
+
+#MenuSemaine{
+    margin-bottom: 10vh;
+}
+
+#MenuSemaine h1{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+#MenuSemaine p{
+    font-size: 1rem;
+    color: black;
+}
+
+#ChoixMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background: #8F9BBA;
+}
+
+#ChoixMenu h4{
+    color: black;
+
+}
+
+#Butt2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6CDFF;
+    text-decoration: none;
+    width: 35vw;
+    height: 3.5vh;
+    border-radius: 40px;
+    margin-bottom: 1.5vh;
+    color: black;
+}
+
+#MenuForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#MenuForm img{
+    width: 60vw;
+}
+
+#MenuForm label{
+    margin: 1vh;
+}
+
+/*Reservation de salle*/
+
+#ResaSalle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+#SalleInfo{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+#SalleInfo p{
+    margin-right: 15px;
+    margin-left: 4px;
+}
+
+#rectRed{
+    width: 35px;
+    height: 20px;
+    background-color: #B60606;
+    border-radius: 10px;
+    border: solid 10px #831616;
+}
+
+#rectGreen{
+    width: 35px;
+    height: 20px;
+    background-color: #3BB54A;
+    border-radius: 10px;
+    border: solid 10px #186922;
+}
+
+#rectBlue{
+    width: 30px;
+    height: 20px;
+    background-color: #227BE5;
+    border-radius: 10px;
+    border: solid 10px #163371;
+}
+
+#EtatSalle{
+    margin-bottom: 10vh;
+}
+
+#SalleOcc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#BoxOcc{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #EFF3FD;
+    margin-bottom: 5vh;
+    border: solid 5px black;
+    width: 80vw;
+    height: 17vh;
+}
+
+#BoxOcc #rectRed{
+    width: 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: bold;
+    margin-top: 1vh;
+}
+
+#BoxOcc #rectGreen{
+    width: 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: bold;
+    margin-top: 1vh;
+}
+#BoxOcc #rectBlue{
+    width: 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: bold;
+    margin-top: 1vh;
+}
+
+/*BON PLANS*/
+
+#BonPlans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+#PlanJour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#PlanJour img{
+    border-radius: 30px;
+}
+
+#PlanJour a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    margin-bottom: 2vh;
+}
+
+#PlanSemaine{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7vh;
+}
+
+#PlanSemaine img{
+    border-radius: 30px;
+}
+
+#PlanSemaine a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    margin-bottom: 2vh;
+}
+
+
+/*BIEN ETRE ETUDIANT*/
+
+#BienEtre{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4vw;
+}
+
+#BienEtre h1{
+    font-size: 1.75rem;
+}
+
+#AllRecette{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+#Recette{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EFF3FD;
+    border-radius: 40px;
+    color: black;
+    box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+    height: 20vh;
+    width: 16vh;
+    margin: 10px;
+}
+
+#Recette img:first-child{
+    border-radius: 41px 41px 0px 0px;
+    width: 100%;
+}
+
+#RecetteTXT{
+    display: flex;
+    align-items: center;
+}
+
+#RecetteForm{
+    padding-top: 3vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8F9BBA;
+    border-radius: 15px;
+    margin-bottom: 8vh;
+    width: 80vw;
+}
+
+#RecetteForm input, textarea{
+    width: 60vw;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#formTXTligne{
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+#formTXTligne input{
+    width: 25vw;
+    
+}
+
+/*CONTACT*/
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+#SearchContact{
+    display: flex;
+}
+
+#User{
+    display: flex;
+    width: 75vw;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid gray;
+    margin-top: 3vh;
+}
+
+#User img{
+    width: 20vw;
+}
+
+#UserTXT{
+    margin-left: 5vw;
+
+}
+#UserTXT p{
+    margin-top: 0;
+}
+
+#UserTXT h2{
+    margin-bottom: 0;
+}
+
+/*DEVOIRS*/
+
+#Devoirs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+#DevoirsInfo{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+#devoirstatue{
+    display: flex;
+    margin-right: 4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

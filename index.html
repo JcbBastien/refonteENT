@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tableau de bord</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <a href="index.html"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
+            <a href="Profil.html"> <img src="img/person.svg" alt=""></a>
+        </div>
+    </header>
+    
+    <section id="Tableau">
+        <h1>TABLEAU DE BORD</h1>
+        <div class="bord">
+            <a href="https://edt.univ-eiffel.fr/direct/index.jsp?login=visuedt&password=visuedt" class="buttBord" target="_blank">
+                <div>
+                    <img src="img/calendar.png" alt="">
+                    <p>Emploi du temps</p>
+                </div>
+            </a>
+            <a href="Crous.html" class="buttBord">
+                <div>
+                    <img src="img/restaurant.png" alt="">
+                    <p>Menu crous</p>
+                </div>
+            </a>
+            <a href="https://partage.univ-eiffel.fr/" class="buttBord" target="_blank">
+                <div>
+                    <img src="img/messagerie.png" alt="">
+                    <p>Messagerie</p>
+                </div>
+            </a>
+            <a href="Notes.html" class="buttBord">
+                <div>
+                    <img src="img/note.png" alt="">
+                    <p>Mes notes</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="Actu">
+        <h1>Les dernières actualités</h1>
+
+        <div class="slider">
+            <div class="js-navigation">
+                <button class="js-btn-decale-droite">
+                    <span class="arrow"></span>
+                </button>
+            </div>
+            <div class="js-slider">
+                <div class="js-photos">
+                        <div class="js-photo">
+                            <div class="card">
+                                <div class="card-photo"><img src="img/actu.png" alt="car"></div>
+                                <div class="card-data">
+                                    <div>
+                                        <h5>Fermeture de la Bibliothèque Georges Perec</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/actu.png" alt="car">
+                                <div class="card-data">
+                                    <div>
+                                        <h5>Fermeture de la Bibliothèque  Georges Perec</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                </div>
+
+                   
+            </div>
+                
+            <div class="js-navigation">
+                <button class="js-btn-decale-gauche">
+                    <span class="arrow"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <nav>
+        <div id="navbar">
+            <a href="index.html"><img src="img/home.png" alt="Accueil"></a>
+            <a href="Etudes.html"><img src="img/Gestion.png" alt="Gestion d'etude"></a>
+            <a href="Ressource.html"><img src="img/Ressource.png" alt="Ressource"></a>
+            <a href="VieEtudiante.html"><img src="img/VieEtudiante.png" alt="Vie Etudiant"></a>
+        </div>
+    </nav>
+</body>
+<script src="slider.js" defer type="module"></script>
+</html>
