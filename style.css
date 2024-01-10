@@ -568,7 +568,7 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     align-items: center;
 }
 
-#VieContent{
+#VieContent ,#sallevie,#VieBien{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -581,7 +581,7 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 5vh;
 }
 
-#VieContent:last-child{
+#VieBien{
     margin-bottom: 10vh;
 }
 
@@ -590,7 +590,7 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 0;
 }
 
-#VieContent img{
+#VieBien img{
     width: 100%;
 }
 
@@ -605,13 +605,6 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     justify-content: center;
     align-items: center;
 }
-#TicketTXT{
-    display: flex;
-}
-#TicketTXT p:nth-child(2) {
-    transform: rotate(90deg);
-    display: flex;
-}
 
 #VieContentPlan{
     display: flex;
@@ -625,6 +618,108 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     padding-right: 5vw;
     margin-bottom: 5vh;
     align-items: center;
+}
+
+
+
+@media screen and (max-width: 769px) {
+    .restoPC{
+        display: none;
+    }
+
+    #repasr{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    #sectionVie{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+    }
+
+    #sectionVie h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #sectionVie h2{
+        color: #012063;
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+
+    #sectionVie #Butt{
+        width: 15vw;
+        height: 5vh;
+        color: black;
+        box-shadow: 0px 2.687px 2.687px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+    }
+
+    #VieContent , #VieBien{
+        width: 75vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #VieContent img{
+        width: 45vw;
+    }
+
+    .resto{
+        display: none;
+    }
+
+    #DeuxLigne{
+        display: flex;
+    }
+
+    #sallevie{
+        width: 20vw;
+        margin-right: 4vw;
+        padding-left: 1vw;
+        justify-content: space-between;
+    }
+
+    #VieContentPlan{
+        width: 48.5vw;
+        display: flex;
+        flex-direction: row;
+        padding-left: 1.5vw;
+    }
+
+    #ticket{
+        height: 30vh;
+    }
+
+    #VieBien{
+        width: 75vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 20vh;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    #VieBien img{
+        width: 38.3vw;
+    }
+
+    #VieBien h2{
+        margin-top: 0;
+    }
+
+    #repasf{
+        display: none;
+    }
+    
+
 }
 
 /* PAGE RESSOURCE */
