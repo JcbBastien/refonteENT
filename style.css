@@ -671,6 +671,53 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     justify-content: space-evenly;
 }
 
+@media screen and (min-width: 769px) {
+    #absEtudePC{
+        display: flex;
+        width: 80vw;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        height: 75vh;
+    }
+
+    #Etudes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+    }
+
+    #Etudes h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #DevoirsEtu{
+        margin-top: 0;
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 15px;
+        background: #EFF3FD;
+        box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+        width: 40vw;
+        height: 40vh;
+        margin-bottom: 10vh;
+    }
+
+    #NbAbs{
+        justify-content: space-around;
+    }
+
+    #Etudes #Butt{
+        width: 15vw;
+    }
+}
+
+
 
 
 

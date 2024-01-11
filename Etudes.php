@@ -30,48 +30,48 @@ session_start();
     </header>
     <section id="Etudes">
         <h1>GESTION DES ETUDES</h1>
-        <div id="NbAbs">
-            <h2>NOMBRE D'ABSENCES</h2>
-            <div id="RondAbs" >
-                <p>
-                    <?php
-                        $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
-                        $selectAbsences->execute();
-                        $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
-
-                        $absenceNumber = 0;
-                        foreach($absences as $absence){
-                            if(!$absence['justified']){
-                                $absenceNumber += $absence['time'];
+        <div id=absEtudePC>
+            <div id="NbAbs">
+                <h2>NOMBRE D'ABSENCES</h2>
+                <div id="RondAbs" >
+                    <p>
+                        <?php
+                            $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
+                            $selectAbsences->execute();
+                            $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
+                            $absenceNumber = 0;
+                            foreach($absences as $absence){
+                                if(!$absence['justified']){
+                                    $absenceNumber += $absence['time'];
+                                }
                             }
-                        }
-
-                        echo $absenceNumber.'H';
-                    ?>
-                </p>
+                            echo $absenceNumber.'H';
+                        ?>
+                    </p>
+                </div>
+                <a href="Absences.php" id="Butt">Mes absences</a>
             </div>
-            <a href="Absences.php" id="Butt">Mes absences</a>
-        </div>
-        <div id="DevoirsEtu">
-            <h2>MES DEVOIRS</h2>
-            <div id="DevoirStatus">
-                <div id="DevoirContent">
-                    <img src="img/Doc.svg" alt="">
-                    <p>Lorem ipsum <br>Lorem ipsum</p>
-                    <img src="img/statusDev.svg" alt="">
+            <div id="DevoirsEtu">
+                <h2>MES DEVOIRS</h2>
+                <div id="DevoirStatus">
+                    <div id="DevoirContent">
+                        <img src="img/Doc.svg" alt="">
+                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <img src="img/statusDev.svg" alt="">
+                    </div>
+                    <div id="DevoirContent">
+                        <img src="img/Doc.svg" alt="">
+                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <img src="img/statusDev.svg" alt="">
+                    </div>
+                    <div id="DevoirContent">
+                        <img src="img/Doc.svg" alt="">
+                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <img src="img/statusDev.svg" alt="">
+                    </div>
                 </div>
-                <div id="DevoirContent">
-                    <img src="img/Doc.svg" alt="">
-                    <p>Lorem ipsum <br>Lorem ipsum</p>
-                    <img src="img/statusDev.svg" alt="">
-                </div>
-                <div id="DevoirContent">
-                    <img src="img/Doc.svg" alt="">
-                    <p>Lorem ipsum <br>Lorem ipsum</p>
-                    <img src="img/statusDev.svg" alt="">
-                </div>
+                <a href="Devoirs.php" id="Butt">Voir Plus</a>
             </div>
-            <a href="Devoirs.php" id="Butt">Voir Plus</a>
         </div>
     </section>
     

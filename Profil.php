@@ -62,15 +62,15 @@ session_start();
                     <div id="PCmsg">
                         <div id="msgPV">
                             <p><strong>A.Leroy</strong> - Etude</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                            <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                         </div>
                         <div id="msgPV">
                             <p><strong>A.Leroy</strong> - Etude</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                            <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                         </div>
                         <div id="msgPV">
                             <p><strong>A.Leroy</strong> - Etude</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                            <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                         </div>
                     </div>
                     <div id="botBord"><a href="https://partage.univ-eiffel.fr/" target="_blank" id="ButtPC">Boîte de réception</a></div>
