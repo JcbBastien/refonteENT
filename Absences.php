@@ -1,3 +1,13 @@
+<?php
+include "db_connect.php";
+
+session_start();
+    if (empty($_SESSION['id'])){
+        header("Location:Connexion.php");
+        exit();
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,47 +27,52 @@
     <section id="Absences">
         <h1>VOS ABSENCES</h1>
         <div id="ABSContent">
-            <button id="ABSJusti">
                 <div id="ABSTXT">
                     <h3>Cours</h3>
                     <p>R3.13 Dévpt Back - CM</p>
                 </div>
-                <img src="img/justification.png" alt="">
-            </button>
-            <button id="ABSJusti">
                 <div id="ABSTXT">
                     <h3>Cours</h3>
                     <p>R3.13 Dévpt Back - CM</p>
                 </div>
-                <img src="img/justification.png" alt="">
-            </button>
-            <button id="ABSJusti">
                 <div id="ABSTXT">
                     <h3>Cours</h3>
                     <p>R3.13 Dévpt Back - CM</p>
                 </div>
-                <img src="img/justification.png" alt="">
-            </button>
         </div>
         <div id="emdash2"></div>
         <div id="NombreAbs">
             <div id="RondAbs" >
-                <p>10H</p>
+                <p>
+                    <?php
+                        $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
+                        $selectAbsences->execute();
+                        $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
+
+                        $absenceNumberJustified = 0;
+                        $absenceNumberUnjustified = 0;
+
+                        foreach($absences as $absence){
+                            if(!$absence['justified']){
+                                $absenceNumberUnjustified += $absence['time'];
+                            }else{
+                                $absenceNumberJustified += $absence['time'];
+                            }
+                        }
+
+                        echo $absenceNumberUnjustified + $absenceNumberJustified.'H';
+                    ?>
+                </p>
             </div>
             <h2>DETAILS DES ABSENCES</h2>
             <div id="detailsABS">
                 <div id="LeftABS">
                     <p>Justifiée</p>
-                    <p> non Justifiée</p>
-                    <p>Justification en cours</p>
-                    <p>points en moins</p>
+                    <p>non Justifiée</p>
                 </div>
                 <div id="RightABS">
-                    <strong>6</strong>
-                    <strong>6</strong>
-                    <strong>6</strong>
-                    <strong>6</strong>
-
+                    <strong><?php echo $absenceNumberJustified .'h';?></strong>
+                    <strong><?php echo $absenceNumberUnjustified .'h';?></strong>
                 </div>
             </div>
         </div>

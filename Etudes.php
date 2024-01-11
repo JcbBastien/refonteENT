@@ -1,3 +1,13 @@
+<?php
+include "db_connect.php";
+
+session_start();
+    if (empty($_SESSION['id'])){
+        header("Location:Connexion.php");
+        exit();
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +28,22 @@
         <div id="NbAbs">
             <h2>NOMBRE D'ABSENCES</h2>
             <div id="RondAbs" >
-                <p>10H</p>
+                <p>
+                    <?php
+                        $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
+                        $selectAbsences->execute();
+                        $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
+
+                        $absenceNumber = 0;
+                        foreach($absences as $absence){
+                            if(!$absence['justified']){
+                                $absenceNumber += $absence['time'];
+                            }
+                        }
+
+                        echo $absenceNumber.'H';
+                    ?>
+                </p>
             </div>
             <a href="Absences.php" id="Butt">Mes absences</a>
         </div>

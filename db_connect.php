@@ -1,6 +1,6 @@
 <?php
 
-$dbName = "ENT";
+$dbName = "ent";
 $serverName = "localhost";
 $user = "root";
 $pass = "";

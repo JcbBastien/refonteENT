@@ -1,3 +1,13 @@
+<?php
+include "db_connect.php";
+
+session_start();
+    if (empty($_SESSION['id'])){
+        header("Location:Connexion.php");
+        exit();
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +26,13 @@
     <section id="profil">
         <div id="HeaderProfil" >
             <h1>PROFIL</h1>
-            <a href="#" id="DeconnexionPC"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
+            <a href="deconnexion.php" id="DeconnexionPC"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
         </div>
         <div id="Bio">
             <img src="img/personProfil.svg" alt="">
             <div id="profilTXT">
-                <h1>Re-Bonjour Hugo Lecerf</h1>
-                <h2>Etudiant en 2ème année de BUT MMI</h2>
+                <h1>Re-Bonjour <?php echo $_SESSION['displayName']?></h1>
+                <h2><?php echo $_SESSION['description']?></h2>
             </div>
         </div>
         <div id="messageriePro">
@@ -60,7 +70,7 @@
                     </div>
                     <div id="botBord"><a href="https://partage.univ-eiffel.fr/" target="_blank" id="ButtPC">Boîte de réception</a></div>
                 </div>
-            <a href="#" id="Deconnexion"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
+            <a href="deconnexion.php" id="Deconnexion"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
             <div id="PCBord">
                 <div>
                     <div id="UserPro">

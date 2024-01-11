@@ -1,3 +1,13 @@
+<?php
+include "db_connect.php";
+
+session_start();
+    if (empty($_SESSION['id'])){
+        header("Location:Connexion.php");
+        exit();
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
