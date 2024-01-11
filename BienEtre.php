@@ -33,41 +33,50 @@ session_start();
         <h1>LES RECETTES DES ETUDIANTS</h1>
         <div id="AllRecette">
             <?php
+                if(isset($_POST['submitRecipe'])){
+                    $titreRecette = $_POST['titreRecette'];
+                    $tempsPreparation = $_POST['tempsPreparation'];
+                    $prixRecette = $_POST['prixRecette'];
+                    $imageRecette = $_POST['imageRecette'];
+                    $lienRecette = $_POST['lienRecette'];
+        
+                    $insertRecipe = $db->prepare("INSERT INTO recipe (title, prepare_time, price, image_link, recipe_link) VALUES (?, ?, ?, ?, ?)");
+                    $insertRecipe->execute(array($titreRecette, $tempsPreparation, $prixRecette, $imageRecette, $lienRecette));
+        
+                    echo '<script language="Javascript">
+                    <!--
+                    document.location.replace("BienEtreRedirect.php");
+                    // -->
+                    </script>';
+                };
+
                 $selectRecipes = $db->prepare('SELECT * FROM recipe');
                 $selectRecipes->execute();
                 $recipes = $selectRecipes->fetchall(PDO::FETCH_ASSOC);
 
                 foreach($recipes as $recipe){
                     echo '
-                        <a  href="'.$recipe['recipe_link'].'" id="Recette">
+                        <a  href="'.$recipe['recipe_link'].'" id="Recette" target="_blank">
                             <img src="'.$recipe['image_link'].'" alt="">
                             <h3>'.$recipe['title'].'</h3>
-                            <div id="RecetteTXT"><p>'.$recipe['title'].'</p>
+                            <div id="RecetteTXT"><p>'.$recipe['prepare_time'].'</p>
                                 <img src="img/raphael_dollar.png" alt=""> <p>'.$recipe['price'].'$</p>
                             </div>
                         </a>
                     ';
                 }
-
             ?>
-            <a  href="" id="Recette">
-                <img src="img/repas2.png" alt="">
-                <h3>Poulet au Curry</h3>
-                <div id="RecetteTXT"><p>20 min</p>
-                    <img src="img/raphael_dollar.png" alt=""> <p>10$</p>
-                </div>
-            </a>
         </div>
         
         <form method="post" id="RecetteForm">
             <label for="titreRecette"></label>
-            <input type="text" id="titreRecette" name="titreRecette"  required placeholder="Le titre de la recette">
+            <input type="text" id="titreRecette" name="titreRecette"  required placeholder="Le titre de la recette" maxlength="30">
         
             <div id="formTXTligne">
                 <label for="tempsPreparation"></label>
-                <input type="text" id="tempsPreparation" name="tempsPreparation" required placeholder="Temps de préparation">
+                <input type="text" id="tempsPreparation" name="tempsPreparation" required placeholder="Temps de préparation" maxlength="10">
                 <label for="prixRecette"></label>
-                <input type="text" id="prixRecette" name="prixRecette" required placeholder="Prix de la recette">
+                <input type="number" id="prixRecette" name="prixRecette" required placeholder="Prix de la recette" min="0">
             </div>
         
             <label for="imageRecette">Ajouter une image</label>

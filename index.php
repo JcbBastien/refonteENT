@@ -6,6 +6,7 @@ session_start();
         header("Location:Connexion.php");
         exit();
     };
+$currentDate = date("d-m-Y");
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +50,7 @@ session_start();
             </a>
             <div id="PCBord">
                 <h2>Emplois du temps</h2>
-                <p><strong>Aujourd'hui</strong> - venredi 12 septembre</p>
+                <p><strong>Aujourd'hui</strong> - <?php echo $currentDate?></p>
                 <div id="PCEmploi">
                     <div id="FirstCours">
                         <h3>14 :00 - 15:00</h3>
@@ -74,7 +75,7 @@ session_start();
             </a>
             <div id="PCBord">
                 <h2>Menu CROUS</h2>
-                <p><strong>Aujourd'hui</strong> - venredi 12 septembre</p>
+                <p><strong>Aujourd'hui</strong> - <?php echo $currentDate?></p>
                 <div id="PCCrous">
                     <div id="BordCrous">
                         <div id="MenuBord">
@@ -106,7 +107,7 @@ session_start();
             </a>
             <div id="PCBord">
                 <h2>Messagerie</h2>
-                <p><strong>Aujourd'hui</strong>- venredi 12 septembre</p>
+                <p><strong>Aujourd'hui</strong>- <?php echo $currentDate?></p>
                 <div id="PCmsg">
                     <div id="msgPV">
                         <p><strong>A.Leroy</strong> - Etude</p>
@@ -215,7 +216,7 @@ session_start();
                                 <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
                                 <div id="notesBordContent">
                                     <p>Votre moyenne : </p>
-                                    <strong>'.$sum/$sumAmount.'/20</strong>
+                                    <strong>'.round($sum/$sumAmount, 2).'/20</strong>
                                 </div>
                             </div>
                             ';

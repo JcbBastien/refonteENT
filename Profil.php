@@ -6,6 +6,7 @@ session_start();
         header("Location:Connexion.php");
         exit();
     };
+$currentDate = date("d-m-Y");
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +59,7 @@ session_start();
         <div id="SectionProfil">
             <div id="PCBord">
                     <h2>Messagerie</h2>
-                    <p><strong>Aujourd'hui</strong>- venredi 12 septembre</p>
+                    <p><strong>Aujourd'hui</strong>- <?php echo $currentDate?></p>
                     <div id="PCmsg">
                         <div id="msgPV">
                             <p><strong>A.Leroy</strong> - Etude</p>
