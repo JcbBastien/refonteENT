@@ -31,60 +31,62 @@ session_start();
 
     <section id="notes">
         <h1>MES NOTES</h1>
-        <div id="notesDiv">
-            <div id="notesHeader">
-                <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>A.Leroy : Communiquer en Anglais</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>H.Lo : Gestion de projets</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>F.Laoufi : UX UI design</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>Epstein : Coder </p>
-                <strong>12/20</strong>
-            </div>
-        </div>
-        <div id="emdash2"></div>
-        <div id="notesDiv">
-            <div id="notesHeader">
-                <p><strong>SAE 3.02</strong> -  Lorem ipsum</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>A.Leroy : Communiquer en Anglais</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>H.Lo : Gestion de projets</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>F.Laoufi : UX UI design</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>Epstein : Coder </p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>A.Leroy : Communiquer en Anglais</p>
-                <strong>12/20</strong>
-            </div>
-            <div id="notesContent">
-                <p>H.Lo : Gestion de projets</p>
-                <strong>12/20</strong>
-            </div>
-            
-        </div>
+        <?php
+                    $selectSubjects = $db->prepare('SELECT * FROM subject');
+                    $selectSubjects->execute();
+                    $subjects = $selectSubjects->fetchall(PDO::FETCH_ASSOC);
+
+                    foreach($subjects as $subject){
+                        $sum = 0;
+
+                        $selectGrades = $db->prepare('SELECT * FROM grade WHERE subject_id = ' . $subject['subject_id'] . ' AND student_id = '.$_SESSION['id']);
+                        $selectGrades->execute();
+                        $grades = $selectGrades->fetchall(PDO::FETCH_ASSOC);
+                        
+                        if(empty($grades)){
+                            echo '
+                                <div id="emdash2"></div>
+                                <div id="notesDiv">
+                                    <div id="notesHeader">
+                                        <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
+                                        <strong>N/A</strong>
+                                    </div>
+                                </div>
+                                ';
+                        }else{
+
+                            $sumAmount = 0;
+                            foreach($grades as $grade){
+                                $sumAmount++;
+                                $sum += $grade['value'];
+                            }
+
+                            echo '
+                                <div id="emdash2"></div>
+                                <div id="notesDiv">
+                                    <div id="notesHeader">
+                                        <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
+                                        <strong>'.$sum/$sumAmount.'/20</strong>
+                                    </div>
+                                ';
+
+                            foreach($grades as $grade){
+                                $selectTeacher = $db->prepare('SELECT * FROM account WHERE account_id = '. $grade['teacher_id']);
+                                $selectTeacher->execute();
+                                $teacher = $selectTeacher->fetch();
+
+                                echo '
+                                <div id="notesContent">
+                                    <p>'.$teacher['displayName'].'</p>
+                                    <strong>'.$grade['value'].'/20</strong>
+                                </div>'
+                                ;
+                            }
+
+                            echo '</div>';
+                        }
+                    }
+        ?>
     </section>
     <nav>
         <div id="navbar">
