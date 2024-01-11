@@ -31,6 +31,7 @@ session_start();
 
     <section id="notes">
         <h1>MES NOTES</h1>
+        <div id="NotePC">
         <?php
                     $selectSubjects = $db->prepare('SELECT * FROM subject');
                     $selectSubjects->execute();
@@ -45,13 +46,13 @@ session_start();
                         
                         if(empty($grades)){
                             echo '
-                                <div id="emdash2"></div>
-                                <div id="notesDiv">
-                                    <div id="notesHeader">
-                                        <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
-                                        <strong>N/A</strong>
+                                    <div id="emdash2"></div>
+                                    <div id="notesDiv">
+                                        <div id="notesHeader">
+                                            <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
+                                            <strong>N/A</strong>
+                                        </div>
                                     </div>
-                                </div>
                                 ';
                         }else{
 
@@ -63,11 +64,13 @@ session_start();
 
                             echo '
                                 <div id="emdash2"></div>
+                                
                                 <div id="notesDiv">
                                     <div id="notesHeader">
                                         <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
                                         <strong>'.$sum/$sumAmount.'/20</strong>
                                     </div>
+                                
                                 ';
 
                             foreach($grades as $grade){
@@ -87,6 +90,7 @@ session_start();
                         }
                     }
         ?>
+        </div>
     </section>
     <nav>
         <div id="navbar">

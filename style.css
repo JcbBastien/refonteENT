@@ -1166,6 +1166,67 @@ a{
     align-items: center;
 }
 
+@media screen and (min-width: 769px) {
+
+    #notes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+    }
+
+    #notes h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #notesDiv{
+        width: 40vw;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-bottom: 3vh;
+    }
+
+    #notesContent{
+        width: 40vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #notesContent strong{
+        font-size: 1rem;
+    }
+
+    #notesHeader{
+        width: 40vw;
+        height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: #EFF3FD;
+        border-radius: 15px;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    #notesHeader strong{
+        font-size: 1.2rem;
+        margin-left: 2vw;
+    }
+
+    #NotePC{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 85vw;
+        justify-content: space-between;
+
+    }
+
+}
+
 /*CROUS*/
 
 #SectionCrous{
