@@ -42,21 +42,27 @@ session_start();
                                 $selectTeacher = $db->prepare('SELECT * FROM account WHERE account_id = '. $absence['teacher_id']);
                                 $selectTeacher->execute();
                                 $teacher = $selectTeacher->fetch();
+
+                                if(!$absence['justified']){
+                                    $colorClass = 'style="background-color:salmon"';
+                                }else{
+                                    $colorClass = '';
+                                }
                                 echo '
-                                    <div id="ABSTXT">
-                                    <img src="img/Icon Abs.png" alt="">
-                                    <div id="ColAbsTXT">
-                                    <h3>HEURE</h3>
-                                    <p>'.$absence['time'].'h</p>
-                                    </div>
-                                     <div id="ColAbsTXT">
-                                        <h3>PROFESSEUR</h3>
-                                        <p>'.$teacher['displayName'].'</p>
-                                    </div>
-                                    <div id="ColAbsTXT">
-                                        <h3>DATE</h3>
-                                        <p>le '.$absence['date'].'</p>
+                                    <div id="ABSTXT" '.$colorClass.'>
+                                        <img src="img/Icon Abs.png" alt="">
+                                        <div id="ColAbsTXT">
+                                        <h3>HEURE</h3>
+                                        <p>'.$absence['time'].'h</p>
                                         </div>
+                                        <div id="ColAbsTXT">
+                                            <h3>PROFESSEUR</h3>
+                                            <p>'.$teacher['displayName'].'</p>
+                                        </div>
+                                        <div id="ColAbsTXT">
+                                            <h3>DATE</h3>
+                                            <p>le '.$absence['date'].'</p>
+                                            </div>
                                     </div>
                                 ';
                             }

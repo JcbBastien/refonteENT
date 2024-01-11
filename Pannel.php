@@ -43,8 +43,10 @@ if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
         <?php
             if($_SESSION['isAdmin']){
                 echo '
+                    <h2>Section administrateur</h3>
                     <a href="ComptesMenu.php">Gestion des comptes</a>
                     <a href="MatiereMenu.php">Menu des matières</a>
+                    <a href="BienEtreMenu.php">Gestion des recettes</a>
                 ';
             }
         ?>

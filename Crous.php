@@ -6,6 +6,7 @@ session_start();
         header("Location:Connexion.php");
         exit();
     };
+    $currentDate = date("d-m-Y");
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ session_start();
 
     <section id="SectionCrous">
         <h2>LE MENU DU JOUR</h2>
-        <p><strong>Aujourd'hui - </strong>  vendredi 12 janvier</p>
+        <p><strong>Aujourd'hui - </strong>  <?php echo $currentDate?></p>
 
         <div id="Menu">
             <div id="MenuCrous">

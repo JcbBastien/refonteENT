@@ -68,7 +68,7 @@ session_start();
                                 <div id="notesDiv">
                                     <div id="notesHeader">
                                         <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
-                                        <strong>'.$sum/$sumAmount.'/20</strong>
+                                        <strong>'.round($sum/$sumAmount, 2).'/20</strong>
                                     </div>
                                 
                                 ';
