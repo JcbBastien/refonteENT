@@ -179,25 +179,34 @@ session_start();
             </a>
             <div id="PCBord">
                 <h2>Mes notes</h2>
-                <div id="notesBord">
-                <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
-                <div id="notesBordContent">
-                    <p>Votre notes : </p>
-                    <strong>12/20</strong>
-                </div>
-                <div id="notesBordContent">
-                    <p>Votre moyenne : </p>
-                    <strong>12/20</strong>
-                </div>
-                
+                <?php
+                    $selectSubjects = $db->prepare('SELECT * FROM subject');
+                    $selectSubjects->execute();
+                    $subjects = $selectSubjects->fetchall(PDO::FETCH_ASSOC);
 
-            </div>
+                    $i = 0;
+                    foreach($subjects as $subject){
+                        
+                    }
+                    echo '
+                    <div id="notesBord">
+                        <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
+                        <div id="notesBordContent">
+                            <p>Votre moyenne : </p>
+                            <strong>12/20</strong>
+                        </div>
+                    </div>
+                    ';
+                ?>
+                <div id="notesBord">
+                        <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
+                    <div id="notesBordContent">
+                        <p>Votre moyenne : </p>
+                        <strong>12/20</strong>
+                    </div>
+                </div>
             <div id="notesBord">
                 <p><strong>SAE 3.03</strong> -  Lorem ipsum</p>
-                <div id="notesBordContent">
-                    <p>Votre notes : </p>
-                    <strong>12/20</strong>
-                </div>
                 <div id="notesBordContent">
                     <p>Votre moyenne : </p>
                     <strong>12/20</strong>

@@ -38,10 +38,13 @@ if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
 
     <section id="contact">
         <a href="AbsencesMenu.php">Menu des absences</a>
+        <a href="GestionSalle.php">Gestion des salles</a>
+        <a href="MenuNotes.php">Gestion des notes</a>
         <?php
             if($_SESSION['isAdmin']){
                 echo '
                     <a href="ComptesMenu.php">Gestion des comptes</a>
+                    <a href="MatiereMenu.php">Menu des matières</a>
                 ';
             }
         ?>

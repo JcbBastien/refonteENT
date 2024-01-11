@@ -2,10 +2,18 @@
 include "db_connect.php";
 
 session_start();
-    if (empty($_SESSION['id'])){
-        header("Location:Connexion.php");
-        exit();
-    };
+
+if (empty($_SESSION['id'])){
+    header("Location:Connexion.php");
+    exit();
+};
+
+if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
+}else{
+    header("Location:index.php");
+    exit();
+};
+$currentDate = date("Y-m-d");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +21,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salle</title>
+    <title>Salle - Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,8 +37,50 @@ session_start();
         </div>
     </header>
 
+    <?php
+
+        if(isset($_POST['submitRoom'])){
+            $roomNumberId = $_POST['roomNumber'];
+            $roomStatus = $_POST['roomStatus'];
+
+            $updateRoom = $db->prepare('UPDATE room SET status = '.$roomStatus.' WHERE room_id = '.$roomNumberId);
+            $updateRoom->execute();
+
+            echo '<script language="Javascript">
+            <!--
+            document.location.replace("GestionSalleRedirect.php");
+            // -->
+            </script>';
+        };
+
+    ?>
+
+    <section id="contact">
+        <form method="POST">
+            <h2>Gêrer les salles</h2>
+            <select required name="roomNumber">
+                <?php
+                    $selectRooms = $db->prepare('SELECT * FROM room');
+                    $selectRooms->execute();
+                    $rooms = $selectRooms->fetchall(PDO::FETCH_ASSOC);
+
+                    foreach($rooms as $room){
+                        echo '
+                            <option value="'.$room['room_id'].'">'.$room['room_number'].'</option>
+                        ';
+                    }
+                ?>
+            </select>
+            <select required name="roomStatus">
+                <option value="0">Cours</option>
+                <option value="1">Disponible</option>
+                <option value="2">Occupé</option>
+            </select>
+            <button type="submit" name="submitRoom">Confirmer
+            </button>
+        </form>
+    </section>
     <section id="ResaSalle">
-        <h1>RESERVATION D'UNE SALLE</h1>
         <div id="ResaSallePC">
             <div id="SalleInfo">
                 <div id="rectRed"></div>
@@ -45,10 +95,6 @@ session_start();
                     <h2>Salles De Cours</h2>
                     <div id="BoxOcc">
                         <?php
-                            $selectRooms = $db->prepare('SELECT * FROM room');
-                            $selectRooms->execute();
-                            $rooms = $selectRooms->fetchall(PDO::FETCH_ASSOC);
-
                             foreach($rooms as $room){
                                 if($room['status'] == 0){
                                     echo '
