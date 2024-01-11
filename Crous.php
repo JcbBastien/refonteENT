@@ -92,13 +92,15 @@ session_start();
                 <h4>15 JANVIER - 19 JANVIER</h4>
                 <form action="#" method="post" id="MenuForm">
                     <label>
-                        <img src="img/repas.png" alt="">
+                        <img src="img/repas.png" alt="" id="repasMOB">
                         <input type="checkbox" name="choix_image" value="image1">
+                        <img src="img/menu2.png" alt="" id="repasPC">
                     </label>
                 
                     <label>
-                        <img src="img/repas2.png" alt="">
+                        <img src="img/repas2.png" alt="" id="repasMOB">
                         <input type="checkbox" name="choix_image" value="image2">
+                        <img src="img/menu2.png" alt="" id="repasPC">
                     </label>
                 
                     <input type="submit" value="Soumettre" id="Butt2">

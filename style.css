@@ -196,6 +196,10 @@ transform: rotate(180deg); /* Modification de la rotation pour pointer vers la d
 .js-navigation{
     display: none;
 }
+
+#repasPC{
+    display: none;
+}
 }
 
 
@@ -292,6 +296,10 @@ transform: rotate(180deg); /* Modification de la rotation pour pointer vers la d
         display: flex;
         flex-direction: column;
         border-left: solid 2px black;
+    }
+
+    #repasMOB{
+        display: none;
     }
 
     #BordCrous{
