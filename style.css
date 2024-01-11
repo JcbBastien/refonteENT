@@ -24,6 +24,7 @@ body{
     position: fixed;
     bottom: 0;
     width: 100vw;
+    z-index: 3;
 }
 
 #ButtPC{
@@ -406,6 +407,10 @@ transform: rotate(180deg); /* Modification de la rotation pour pointer vers la d
 
     #ActuPC{
         width: 54.5vw;
+    }
+
+    #PCBord strong{
+        font-size: 1rem;
     }
 
 }
@@ -1039,6 +1044,17 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+#ABSTXT{
+    display: flex;
+    background-color: #3BB54A;
+    border-radius: 15px;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
 }
 
 #ABSJusti{
