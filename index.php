@@ -186,32 +186,47 @@ session_start();
 
                     $i = 0;
                     foreach($subjects as $subject){
+                        $i++;
+                        $sum = 0;
+
+                        $selectGrades = $db->prepare('SELECT * FROM grade WHERE subject_id = ' . $subject['subject_id'] . ' AND student_id = '.$_SESSION['id']);
+                        $selectGrades->execute();
+                        $grades = $selectGrades->fetchall(PDO::FETCH_ASSOC);
                         
+                        if(empty($grades)){
+                            echo '
+                                <div id="notesBord">
+                                    <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
+                                    <div id="notesBordContent">
+                                        <p>Votre moyenne :</p>
+                                        <strong>N/A</strong>
+                                    </div>
+                                </div>
+                                ';
+                        }else{
+
+                            $sumAmount = 0;
+                            foreach($grades as $grade){
+                                $sumAmount++;
+                                $sum += $grade['value'];
+                            }
+
+                            echo '
+                            <div id="notesBord">
+                                <p><strong>'.$subject['abreviation'].'</strong> -  '.$subject['name'].'</p>
+                                <div id="notesBordContent">
+                                    <p>Votre moyenne : </p>
+                                    <strong>'.$sum/$sumAmount.'/20</strong>
+                                </div>
+                            </div>
+                            ';
+                        }
+
+                        if ($i == 2){
+                            break;
+                        }
                     }
-                    echo '
-                    <div id="notesBord">
-                        <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
-                        <div id="notesBordContent">
-                            <p>Votre moyenne : </p>
-                            <strong>12/20</strong>
-                        </div>
-                    </div>
-                    ';
                 ?>
-                <div id="notesBord">
-                        <p><strong>SAE 3.01</strong> -  Lorem ipsum</p>
-                    <div id="notesBordContent">
-                        <p>Votre moyenne : </p>
-                        <strong>12/20</strong>
-                    </div>
-                </div>
-            <div id="notesBord">
-                <p><strong>SAE 3.03</strong> -  Lorem ipsum</p>
-                <div id="notesBordContent">
-                    <p>Votre moyenne : </p>
-                    <strong>12/20</strong>
-                </div>
-            </div>
             <div id="botBord"><a href="Notes.php" id="ButtPC">Voir mes notes</a></div>
 
         </div>
