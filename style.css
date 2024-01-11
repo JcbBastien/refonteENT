@@ -1231,6 +1231,108 @@ a{
     margin-top: 1vh;
 }
 
+@media screen and (min-width: 769px) {
+    #ResaSalle{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+    }
+
+    #ResaSalle h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #SallePC{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #SalleOcc{
+        display: none;
+    }
+
+    #SalleInfo{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    #SalleOccPC{
+        display: flex;
+        background: #EFF3FD;
+        width: 60vw;
+        height: 70vh;
+        flex-direction: column;
+    }
+
+    #SalleOccH2{
+        width: 60vw;
+        height: 13vh;
+        display: flex;
+        justify-content: center;
+        background-color: #B6CDFF;
+        font-size: 2.5rem;
+        align-items: center;
+    }
+
+    #EtatSalle{
+        margin-bottom: 0;
+    }
+    #SalleOccH2 h2{
+        font-weight: 600;
+    }
+
+    #ResaSallePC{
+        width: 80vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #rectBlue, #rectGreen, #rectRed{
+        width: 8vw;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: bold;
+        border-radius: 20px;
+
+    }
+    #rectRed{
+
+        border: solid 20px #831616;
+    }
+    
+    #rectGreen{
+
+        border: solid 20px #186922;
+    }
+    
+    #rectBlue{
+        border: solid 20px #163371;
+    }
+
+    #SalleInfo p {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    #BoxRectPc{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: 60vh;
+        align-items: center;
+        justify-items: center;
+    }
+    
+}
+
 /*BON PLANS*/
 
 #BonPlans{

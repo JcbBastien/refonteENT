@@ -25,50 +25,75 @@ session_start();
     </header>
 
     <section id="ResaSalle">
-        <h1>RESERVATION <br>D'UNE SALLE</h1>
-        <div id="SalleInfo">
-            <div id="rectRed"></div>
-            <p>Cours</p>
-            <div id="rectGreen"></div>
-            <p>Disponible</p>
-            <div id="rectBlue"></div>
-            <p>Occupé</p>
-        </div>
+        <h1>RESERVATION D'UNE SALLE</h1>
+        <div id="ResaSallePC">
+            <div id="SalleInfo">
+                <div id="rectRed"></div>
+                <p>Cours</p>
+                <div id="rectGreen"></div>
+                <p>Disponible</p>
+                <div id="rectBlue"></div>
+                <p>Occupé</p>
+            </div>
+            <div id="EtatSalle">
+                <div id="SalleOcc">
+                    <h2>Salles De Cours</h2>
+                    <div id="BoxOcc">
+                        <div id="rectRed"> 120</div>
+                        <div id="rectRed"> 122</div>
+                        <div id="rectRed"> 123</div>
+                        <div id="rectRed"> 124</div>
+                        <div id="rectRed"> 125</div>
+                        <div id="rectRed"> 126</div>
+                    </div>
+                </div>
+                <div id="SalleOcc">
+                    <h2>Salles Disponibles</h2>
+                    <div id="BoxOcc">
+                        <div id="rectGreen"> 120</div>
+                        <div id="rectGreen"> 122</div>
+                        <div id="rectGreen"> 123</div>
+                        <div id="rectGreen"> 124</div>
+                        <div id="rectGreen"> 125</div>
+                        <div id="rectGreen"> 126</div>
+                    </div>
+                </div>
+                <div id="SalleOcc">
+                    <h2>Salles Occupées</h2>
+                    <div id="BoxOcc">
+                        <div id="rectBlue"> 120</div>
+                        <div id="rectBlue"> 122</div>
+                        <div id="rectBlue"> 123</div>
+                        <div id="rectBlue"> 124</div>
+                        <div id="rectBlue"> 125</div>
+                        <div id="rectBlue"> 126</div>
+                    </div>
+                </div>
+                <div id="SalleOccPC">
+                    <div id="SalleOccH2">
+                        <h2>SALLE DISPONIBLES</h2>
+                    </div>
+                    <div id="BoxRectPc">
+                        <div id="rectRed"> 120</div>
+                        <div id="rectBlue"> 121</div>
+                        <div id="rectGreen"> 122</div>
+                        <div id="rectRed"> 123</div>
+                        <div id="rectRed"> 124</div>
+                        <div id="rectRed"> 125</div>
+                        <div id="rectRed"> 126</div>
+                        <div id="rectRed"> 155</div>
+                        <div id="rectRed"> 156</div>
+                        <div id="rectRed"> 157</div>
+                        <div id="rectRed"> 125</div>
+                        <div id="rectRed"> 126</div>
+                        <div id="rectRed"> 155</div>
+                        <div id="rectRed"> 156</div>
+                        <div id="rectRed"> 157</div>
+                    </div>
 
-        <div id="EtatSalle">
-            <div id="SalleOcc">
-                <h2>Salles De Cours</h2>
-                <div id="BoxOcc">
-                    <div id="rectRed"> 120</div>
-                    <div id="rectRed"> 122</div>
-                    <div id="rectRed"> 123</div>
-                    <div id="rectRed"> 124</div>
-                    <div id="rectRed"> 125</div>
-                    <div id="rectRed"> 126</div>
+
                 </div>
-            </div>
-            <div id="SalleOcc">
-                <h2>Salles Disponibles</h2>
-                <div id="BoxOcc">
-                    <div id="rectGreen"> 120</div>
-                    <div id="rectGreen"> 122</div>
-                    <div id="rectGreen"> 123</div>
-                    <div id="rectGreen"> 124</div>
-                    <div id="rectGreen"> 125</div>
-                    <div id="rectGreen"> 126</div>
-                </div>
-            </div>
-            <div id="SalleOcc">
-                <h2>Salles Occupées</h2>
-                <div id="BoxOcc">
-                    <div id="rectBlue"> 120</div>
-                    <div id="rectBlue"> 122</div>
-                    <div id="rectBlue"> 123</div>
-                    <div id="rectBlue"> 124</div>
-                    <div id="rectBlue"> 125</div>
-                    <div id="rectBlue"> 126</div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
