@@ -77,18 +77,17 @@ session_start();
                     </div>
                     <div id="CoursStatues">
                         <p>Date de rendu :</p>
-                        <p>14/04/2023</p>
+                        <p>14/04/2024</p>
                         <p>Etat:</p>
                         <p>en attente</p>
                     </div>
                     <div id="CoursDesc">
-                        <p>Description: <br>Lorem ipsum dolor sit amet consectetur. Mattis justo ut ut et morbi sit commodo id. Commodo cras lectus eu porta adipiscing consequat aliquam aliquam. </p>
+                        <p>Description: <br>Dans le cadre de notre cursus axé sur les métiers du multimédia, les étudiants sont chargés de concevoir un projet multimédia interactif novateur. Le devoir implique la création d'une expérience immersive qui intègre des éléments audio, visuels et interactifs, mettant en avant les compétences polyvalentes propres à ce domaine.</p>
                     </div>
                     <div id="CoursFichier">
                         <p>Fichiers :</p>
                         <a href="#">COURS</a>
-                        <a href="#">Protocole</a>
-                        <a href="#" id="Butt">En savoir plus</a>
+                        <a href="https://elearning.univ-eiffel.fr/?redirect=0" id="Butt">En savoir plus</a>
                     </div>
                 </div>
                 <div id="CoursContent">

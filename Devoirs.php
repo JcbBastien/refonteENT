@@ -31,76 +31,93 @@ session_start();
 
     <section id="Devoirs">
         <h1>MES DEVOIRS</h1>
-        <div id="DevoirsInfo">
-            <div id="devoirstatue">
-                <img src="img/jaune.svg" alt="">
-                <p>En attente</p>
-            </div>
-            <div id="devoirstatue">
-                <img src="img/Rouge.svg" alt="">
-                <p>Non rendu</p>
-            </div>
-            <div id="devoirstatue">
-                <img src="img/vert.svg" alt="">
-                <p>Rendu</p>
-            </div>
-        </div>
-
-        <div id="Cours">
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
-                        <p>Fatima Laoufi</p>
+        <div id="deveee">
+            <div>
+                <div id="DevoirsInfo">
+                    <div id="devoirstatue">
+                        <img src="img/jaune.svg" alt="">
+                        <p>En attente</p>
                     </div>
-                    <img src="img/jaune.svg" alt="">
+                    <div id="devoirstatue">
+                        <img src="img/Rouge.svg" alt="">
+                        <p>Non rendu</p>
+                    </div>
+                    <div id="devoirstatue">
+                        <img src="img/vert.svg" alt="">
+                        <p>Rendu</p>
+                    </div>
                 </div>
-                <div id="CoursStatues">
-                    <p>Date de rendu :</p>
-                    <p>14/04/2023</p>
-                    <p>Etat:</p>
-                    <p>en attente</p>
-                </div>
-                <div id="CoursDesc">
-                    <p>Description: <br>Lorem ipsum dolor sit amet consectetur. Mattis justo ut ut et morbi sit commodo id. Commodo cras lectus eu porta adipiscing consequat aliquam aliquam. </p>
-                </div>
-                <div id="CoursFichier">
-                    <p>Fichiers :</p>
-                    <a href="#">COURS</a>
-                    <a href="#">Protocole</a>
-                    <input type="file" id="Butt">
+                <div id="Cours">
+                    <div id="CoursContent">
+                        <div id="CoursHeader">
+                            <img src="img/Doc.svg" alt="">
+                            <div id="CheaderTXT">
+                                <h3>Concevoir et développer un ENT</h3>
+                                <p>Fatima Laoufi</p>
+                            </div>
+                            <img src="img/jaune.svg" alt="">
+                        </div>
+                        <div id="CoursStatues">
+                            <p>Date de rendu :</p>
+                            <p>14/04/2023</p>
+                            <p>Etat:</p>
+                            <p>en attente</p>
+                        </div>
+                        <div id="CoursDesc">
+                            <p>Description: <br>Dans le cadre de notre cursus axé sur les métiers du multimédia, les étudiants sont chargés de concevoir un projet multimédia interactif novateur. Le devoir implique la création d'une expérience immersive qui intègre des éléments audio, visuels et interactifs, mettant en avant les compétences polyvalentes propres à ce domaine.</p>
+                        </div>
+                        <div id="CoursFichier">
+                            <p>Fichiers :</p>
+                            <a href="#">Protocole</a>
+                            <input type="file" id="Butt">
+                        </div>
+                    </div>
+                    <div id="CoursContent">
+                        <div id="CoursHeader">
+                            <img src="img/Doc.svg" alt="">
+                            <div id="CheaderTXT">
+                                <h3>Concevoir et développer un ENT</h3>
+                                <p>Fatima Laoufi</p>
+                            </div>
+                            <img src="img/jaune.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="CoursContent">
+                        <div id="CoursHeader">
+                            <img src="img/Doc.svg" alt="">
+                            <div id="CheaderTXT">
+                                <h3>Concevoir et développer un ENT</h3>
+                                <p>Fatima Laoufi</p>
+                            </div>
+                            <img src="img/vert.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="CoursContent">
+                        <div id="CoursHeader">
+                            <img src="img/Doc.svg" alt="">
+                            <div id="CheaderTXT">
+                                <h3>Concevoir et développer un ENT</h3>
+                                <p>Fatima Laoufi</p>
+                            </div>
+                            <img src="img/Rouge.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
-                        <p>Fatima Laoufi</p>
-                    </div>
-                    <img src="img/jaune.svg" alt="">
-                </div>
-            </div>
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
-                        <p>Fatima Laoufi</p>
-                    </div>
-                    <img src="img/vert.svg" alt="">
-                </div>
-            </div>
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
-                        <p>Fatima Laoufi</p>
-                    </div>
-                    <img src="img/Rouge.svg" alt="">
-                </div>
+            <div id="RightDev">
+                <h2>DETAILS</h2>
+            <div id="CoursStatues">
+                            <p>Date de rendu :</p>
+                            <p>14/04/2023</p>
+                            <p>Etat:</p>
+                            <p>en attente</p>
+                        </div>
+                        <div id="CoursDesc">
+                            <p>Description: <br>Dans le cadre de notre cursus axé sur les métiers du multimédia, les étudiants sont chargés de concevoir un projet multimédia interactif novateur. Le devoir implique la création d'une expérience immersive qui intègre des éléments audio, visuels et interactifs, mettant en avant les compétences polyvalentes propres à ce domaine.</p>
+                        </div>
+                        <div id="CoursFichier">
+                            <a href="https://elearning.univ-eiffel.fr/?redirect=0" id="ButtPC">Rendre le Devoirs </a>
+                        </div>
             </div>
         </div>
     </section>

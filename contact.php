@@ -45,7 +45,7 @@ session_start();
         <div id="User">
             <img src="img/Userpic.png" alt="">
             <div id="UserTXT">
-                <h2>Anne Tasso</h2>
+                <h2>Renaud Epstein</h2>
                 <p>Mail / Numero</p>
             </div>
         </div>
@@ -59,14 +59,14 @@ session_start();
         <div id="User">
             <img src="img/Userpic.png" alt="">
             <div id="UserTXT">
-                <h2>Anne Tasso</h2>
+                <h2>Gaëlle Charpentier</h2>
                 <p>Mail / Numero</p>
             </div>
         </div>
         <div id="User">
             <img src="img/Userpic.png" alt="">
             <div id="UserTXT">
-                <h2>Anne Tasso</h2>
+                <h2>Berthet Matthieu</h2>
                 <p>Mail / Numero</p>
             </div>
         </div>

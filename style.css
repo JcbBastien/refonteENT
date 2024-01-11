@@ -576,7 +576,7 @@ transform: rotate(180deg); /* Modification de la rotation pour pointer vers la d
     #UserPro{
         display: flex;
         padding-bottom: 2vh;
-        width: 25vw;
+        width: 20vw;
     }
 
     #UserPro:first-child{
@@ -598,6 +598,10 @@ transform: rotate(180deg); /* Modification de la rotation pour pointer vers la d
     #SectionProfil #PCBord #PCmsg{
         width: 30vw;
         font-size: 1rem;
+    }
+
+    #Butt{
+        color: black;
     }
 
 }
@@ -1487,6 +1491,10 @@ a{
     margin-top: 1vh;
 }
 
+#SalleOccPC{
+    display: none;
+}
+
 @media screen and (min-width: 769px) {
     #ResaSalle{
         display: flex;
@@ -1821,6 +1829,35 @@ a{
     margin-bottom: 0;
 }
 
+@media screen and (min-width: 769px) {
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+    }
+
+    #contact h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+    #User{
+        display: flex;
+        justify-content: center;
+        width: 35vw;
+        padding-bottom: 2vh;
+        border-bottom: 1px solid gray;
+        margin-top: 3vh;
+        justify-content: space-between ;
+    }
+
+    #User img{
+        width: 5vw;
+    }
+}
+
 /*DEVOIRS*/
 
 #Devoirs{
@@ -1842,6 +1879,47 @@ a{
     display: flex;
     margin-right: 4vw;
 }
+
+#RightDev{
+    display: none;
+}
+
+
+@media screen and (min-width: 769px) {
+    #Devoirs{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+    }
+
+    #Devoirs h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #deveee{
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+    }
+    #RightDev{
+        border-radius: 15px;
+        background: #EFF3FD;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vw;
+        width: 25vw;
+        height: 50vh;
+        justify-content: space-between;
+        margin-top: 15vh;
+
+    }
+}
+
 
 
 

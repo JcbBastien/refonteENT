@@ -56,17 +56,17 @@ session_start();
                 <div id="DevoirStatus">
                     <div id="DevoirContent">
                         <img src="img/Doc.svg" alt="">
-                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <p>Dev. Back <br>DataViz</p>
                         <img src="img/statusDev.svg" alt="">
                     </div>
                     <div id="DevoirContent">
                         <img src="img/Doc.svg" alt="">
-                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <p>Dev. Front <br>ResaWeb</p>
                         <img src="img/statusDev.svg" alt="">
                     </div>
                     <div id="DevoirContent">
                         <img src="img/Doc.svg" alt="">
-                        <p>Lorem ipsum <br>Lorem ipsum</p>
+                        <p>Vidéo <br>Podcast</p>
                         <img src="img/statusDev.svg" alt="">
                     </div>
                 </div>
