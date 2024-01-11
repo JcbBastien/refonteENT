@@ -625,8 +625,8 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     justify-content: center;
     align-items: center;
     width: 80vw;
-    height: 27vh;
-    background-image: url(img/NbAbs.svg);
+    height: 35vh;
+    background-image: url(img/pie_chart_2.png);
     background-repeat: no-repeat;
     background-position: center;
     font-size: 3rem;
@@ -670,6 +670,8 @@ box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 
 /* Vie Etudiante */
@@ -1039,6 +1041,97 @@ a{
     background: #EFF3FD;
     box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 10vh;
+}
+
+@media screen and (min-width: 769px) {
+
+    #Absences{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+    }
+
+    #Absences h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #emdash2{
+        display: none;
+    }
+
+    #ABSPC{
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+    }
+
+    #RondAbs{
+        width: 30vw;
+    }
+
+    #RondAbs p{
+        font-weight: bold;
+
+    }
+
+    #ABSContent{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5vh;
+        width: 50vw;
+    }
+
+    #NombreAbs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: none;
+        background: transparent;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+
+    #NombreAbs h2{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    #detailsABS{
+        border-radius: 40px;
+        background: #EFF3FD;
+        box-shadow: 5px 10px 7px 0px rgba(0, 0, 0, 0.25);
+        border: 3px solid black;
+        height: 30vh;
+        width: 20vw;
+    }
+
+    #LeftABS{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #RightABS{
+        font-size: 1.5rem;
+    }
+
+    #ABSTXT{
+        display: flex;
+        background-color: #3BB54A;
+        border-radius: 15px;
+        height: 10vh;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    #ColAbsTXT h3{
+        margin-top: 2vh;
+    }
 }
 
 /*MES NOTES */
