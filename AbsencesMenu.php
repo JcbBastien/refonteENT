@@ -21,13 +21,18 @@ $currentDate = date("Y-m-d");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Absences - Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div id="header">
             <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
+            <?php
+                if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
+                    echo '<a href="Pannel.php">Pannel</a>';
+                }
+            ?>
             <a href="Profil.php"> <img src="img/person.svg" alt=""></a>
         </div>
     </header>
@@ -200,14 +205,6 @@ $currentDate = date("Y-m-d");
                             <p>
                                 Justifiée: '.$justified.'
                             </p>
-                            <form method="POST">
-                                <input type="hidden" name="idJustify" value="' . $absence['absence_id'] . '"></input>
-                                <button type="submit" name="justifyAbsence">Justifiée</button>
-                            </form>
-                            <form method="POST">
-                                <input type="hidden" name="idUnjustify" value="' . $absence['absence_id'] . '"></input>
-                                <button type="submit" name="unjustifyAbsence">Non justifiée</button>
-                            </form>
                             <form method="POST">
                                 <input type="hidden" name="idDelete" value="' . $absence['absence_id'] . '"></input>
                                 <button type="submit" name="deleteAbsence">Supprimer</button>

@@ -20,6 +20,11 @@ session_start();
     <header>
         <div id="header">
             <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
+            <?php
+                if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
+                    echo '<a href="Pannel.php">Pannel</a>';
+                }
+            ?>
             <a href="Profil.php"> <img src="img/person.svg" alt=""></a>
         </div>
     </header>
@@ -27,28 +32,30 @@ session_start();
     <section id="Absences">
         <h1>VOS ABSENCES</h1>
         <div id="ABSContent">
-                <div id="ABSTXT">
-                    <h3>Cours</h3>
-                    <p>R3.13 Dévpt Back - CM</p>
-                </div>
-                <div id="ABSTXT">
-                    <h3>Cours</h3>
-                    <p>R3.13 Dévpt Back - CM</p>
-                </div>
-                <div id="ABSTXT">
-                    <h3>Cours</h3>
-                    <p>R3.13 Dévpt Back - CM</p>
-                </div>
+                    <?php
+                        $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
+                        $selectAbsences->execute();
+                        $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
+
+                        foreach($absences as $absence){
+                            $selectTeacher = $db->prepare('SELECT * FROM account WHERE account_id = '. $absence['teacher_id']);
+                            $selectTeacher->execute();
+                            $teacher = $selectTeacher->fetch();
+
+                            echo '
+                                <div id="ABSTXT">
+                                    <h3>'.$teacher['displayName'].'</h3>
+                                    <p>'.$absence['time'].'h le '.$absence['date'].'</p>
+                                </div>
+                            ';
+                        }
+                    ?>
         </div>
         <div id="emdash2"></div>
         <div id="NombreAbs">
             <div id="RondAbs" >
                 <p>
                     <?php
-                        $selectAbsences = $db->prepare('SELECT * FROM absence WHERE student_id = '.$_SESSION['id']);
-                        $selectAbsences->execute();
-                        $absences = $selectAbsences->fetchall(PDO::FETCH_ASSOC);
-
                         $absenceNumberJustified = 0;
                         $absenceNumberUnjustified = 0;
 

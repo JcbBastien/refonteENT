@@ -20,7 +20,11 @@ session_start();
     <header>
         <div id="header">
             <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
-            <p>Espace restauration</p>
+            <?php
+                if ($_SESSION['isTeacher'] || $_SESSION['isAdmin']){
+                    echo '<a href="Pannel.php">Pannel</a>';
+                }
+            ?>
             <a href="Profil.php"> <img src="img/person.svg" alt=""></a>
         </div>
     </header>
