@@ -14,13 +14,15 @@
         </div>
     </header>
     <section id="profil">
-        <h1>PROFIL</h1>
+        <div id="HeaderProfil" >
+            <h1>PROFIL</h1>
+            <a href="#" id="DeconnexionPC"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
+        </div>
         <div id="Bio">
             <img src="img/personProfil.svg" alt="">
             <div id="profilTXT">
-                <h1>Hugo Lecerf</h1>
-                <h2>BUT MMI2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur </p>
+                <h1>Re-Bonjour Hugo Lecerf</h1>
+                <h2>Etudiant en 2ème année de BUT MMI</h2>
             </div>
         </div>
         <div id="messageriePro">
@@ -37,7 +39,55 @@
                 </div>
             </a>
         </div>
-        <a href="#" id="Deconnexion"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
+
+        <div id="SectionProfil">
+            <div id="PCBord">
+                    <h2>Messagerie</h2>
+                    <p><strong>Aujourd'hui</strong>- venredi 12 septembre</p>
+                    <div id="PCmsg">
+                        <div id="msgPV">
+                            <p><strong>A.Leroy</strong> - Etude</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        </div>
+                        <div id="msgPV">
+                            <p><strong>A.Leroy</strong> - Etude</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        </div>
+                        <div id="msgPV">
+                            <p><strong>A.Leroy</strong> - Etude</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        </div>
+                    </div>
+                    <div id="botBord"><a href="https://partage.univ-eiffel.fr/" target="_blank" id="ButtPC">Boîte de réception</a></div>
+                </div>
+            <a href="#" id="Deconnexion"><img src="img/logout.svg" alt=""> <p>Se Déconnecter</p></a>
+            <div id="PCBord">
+                <div>
+                    <div id="UserPro">
+                    <img src="img/Userpic.png" alt="">
+                        <div id="UserTXT">
+                            <h2>Anne Tasso</h2>
+                            <p>Mail / Numero</p>
+                        </div>
+                    </div>
+                    <div id="UserPro">
+                        <img src="img/Userpic.png" alt="">
+                        <div id="UserTXT">
+                            <h2>Anne Tasso</h2>
+                            <p>Mail / Numero</p>
+                        </div>
+                    </div>
+                    <div id="UserPro">
+                        <img src="img/Userpic.png" alt="">
+                        <div id="UserTXT">
+                            <h2>Anne Tasso</h2>
+                            <p>Mail / Numero</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="contact.php" id="ButtPC">Contact</a>
+            </div>
+        </div>
     </section>
     
     <nav>
