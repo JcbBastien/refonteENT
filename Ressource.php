@@ -31,73 +31,75 @@ session_start();
 
     <section id="Ressource">
         <h1>Ressource</h1>
-        <div id="protocole">
-            <h2>Protocoles</h2>
-            <div id="protocoleContent">
-                <div id="protocoleTXT">
-                    <p>LES SONS DE L’HORRIFIQUE EN BD & DE L’ILLUSTRATION DE ROMAN</p>
-                    <p>KP CHABANE</p>
+        <div id="RessourcePC">
+            <div id="protocole">
+                <h2>Protocoles</h2>
+                <div id="protocoleContent">
+                    <div id="protocoleTXT">
+                        <p>LES SONS DE L’HORRIFIQUE EN BD & DE L’ILLUSTRATION DE ROMAN</p>
+                        <p>KP CHABANE</p>
+                    </div>
+                    <div id="arrondis">
+                        <p>SAE 302</p>
+                    </div>
                 </div>
-                <div id="arrondis">
-                    <p>SAE 302</p>
-                </div>
-            </div>
-            <div id="emdash"></div>
-            <div id="protocoleContent">
-                <div id="protocoleTXT">
-                    <p>Concevoir et développer un ENT</p>
-                    <p>Fatima Laoufi</p>
-                </div>
-                <div id="arrondis">
-                    <p>SAE 301</p>
-                </div>
-            </div>
-            <div id="emdash"></div>
-            <div id="protocoleContent">
-                <div id="protocoleTXT">
-                    <p>Les sons de l’horrifique en BD & de l’illustration de romanFichier</p>
-                    <p>Tony Houziaux</p>
-                </div>
-                <div id="arrondis">
-                    <p>SAE 301</p>
-                </div>
-            </div>
-        </div>
-        <div id="Cours">
-            <h2>Cours</h2>
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
+                <div id="emdash"></div>
+                <div id="protocoleContent">
+                    <div id="protocoleTXT">
+                        <p>Concevoir et développer un ENT</p>
                         <p>Fatima Laoufi</p>
                     </div>
-                    <img src="img/statusDev.svg" alt="">
+                    <div id="arrondis">
+                        <p>SAE 301</p>
+                    </div>
                 </div>
-                <div id="CoursStatues">
-                    <p>Date de rendu :</p>
-                    <p>14/04/2023</p>
-                    <p>Etat:</p>
-                    <p>en attente</p>
-                </div>
-                <div id="CoursDesc">
-                    <p>Description: <br>Lorem ipsum dolor sit amet consectetur. Mattis justo ut ut et morbi sit commodo id. Commodo cras lectus eu porta adipiscing consequat aliquam aliquam. </p>
-                </div>
-                <div id="CoursFichier">
-                    <p>Fichiers :</p>
-                    <a href="#">COURS</a>
-                    <a href="#">Protocole</a>
-                    <a href="#" id="Butt">En savoir plus</a>
+                <div id="emdash"></div>
+                <div id="protocoleContent">
+                    <div id="protocoleTXT">
+                        <p>Les sons de l’horrifique en BD & de l’illustration de romanFichier</p>
+                        <p>Tony Houziaux</p>
+                    </div>
+                    <div id="arrondis">
+                        <p>SAE 301</p>
+                    </div>
                 </div>
             </div>
-            <div id="CoursContent">
-                <div id="CoursHeader">
-                    <img src="img/Doc.svg" alt="">
-                    <div id="CheaderTXT">
-                        <h3>Concevoir et développer un ENT</h3>
-                        <p>Fatima Laoufi</p>
+            <div id="Cours">
+                <h2>Cours</h2>
+                <div id="CoursContent">
+                    <div id="CoursHeader">
+                        <img src="img/Doc.svg" alt="">
+                        <div id="CheaderTXT">
+                            <h3>Concevoir et développer un ENT</h3>
+                            <p>Fatima Laoufi</p>
+                        </div>
+                        <img src="img/statusDev.svg" alt="">
                     </div>
-                    <img src="img/statusDev.svg" alt="">
+                    <div id="CoursStatues">
+                        <p>Date de rendu :</p>
+                        <p>14/04/2023</p>
+                        <p>Etat:</p>
+                        <p>en attente</p>
+                    </div>
+                    <div id="CoursDesc">
+                        <p>Description: <br>Lorem ipsum dolor sit amet consectetur. Mattis justo ut ut et morbi sit commodo id. Commodo cras lectus eu porta adipiscing consequat aliquam aliquam. </p>
+                    </div>
+                    <div id="CoursFichier">
+                        <p>Fichiers :</p>
+                        <a href="#">COURS</a>
+                        <a href="#">Protocole</a>
+                        <a href="#" id="Butt">En savoir plus</a>
+                    </div>
+                </div>
+                <div id="CoursContent">
+                    <div id="CoursHeader">
+                        <img src="img/Doc.svg" alt="">
+                        <div id="CheaderTXT">
+                            <h3>Concevoir et développer un ENT</h3>
+                            <p>Fatima Laoufi</p>
+                        </div>
+                        <img src="img/statusDev.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

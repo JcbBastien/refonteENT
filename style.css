@@ -930,6 +930,44 @@ a{
     width: 25vw;
 }
 
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
+
+    #Ressource{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        margin-top: -6vh;
+    }
+
+    #Ressource h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #RessourcePC{
+        display: flex;
+        justify-content: space-around;
+
+        width: 80vw;
+    }
+
+    #protocole{
+        width: 35vw;
+    }
+
+    #Cours{
+        width: 35vw;
+    }
+}
+
 /* Absences */
 
 #Absences{
