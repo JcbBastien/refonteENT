@@ -8,20 +8,12 @@ include "db_connect.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header>
-        <div id="header">
-            <a href="index.php"><img src="img/LogoAccueil.png" alt="Retour a l'accueil"></a>
-        </div>
-    </header>
-    <section>
-        <div id="HeaderProfil" >
-            <h1>Se connecter</h1>
-            <p>Veuillez vous connecter pour accèder à la plateforme.</p>
-        </div>
-
+    <section id="Loginn">
+        <h1>LOGIN</h1>
+        <div id="RightLog"><a href="index.php"><img src="img/UnivGust.png" alt="Retour a l'accueil"></a></div>
         <div>
             <p style="color:red;">
                 <?php
@@ -75,11 +67,15 @@ include "db_connect.php";
         </div>
 
 
-        <form method="POST">
-            <input required type="text" name="login" placeholder="Identifiant" maxlength="100"/>
-            <input required type="password" name="pwd" placeholder="Mot de passe" autocomplete="off" maxlength="60"/>
-            <button type="submit" name="submit">Se connecter</button>
-        </form>
+            <form method="POST" id="LoginConnecter">
+                <div id="LogH2">
+                    <h2>SERVICE CENTRAL D'AUTHENTIFICATION</h2>
+                </div>
+                <p>Entrez votre identifiant et votre mot de passe.</p>
+                <input required type="text" name="login" placeholder="Identifiant" maxlength="100"/>
+                <input required type="password" name="pwd" placeholder="Mot de passe" autocomplete="off" maxlength="60"/>
+                <button type="submit" name="submit">SE CONNECTER</button>
+            </form>
     </section>
 </body>
 </html>

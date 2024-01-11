@@ -930,6 +930,44 @@ a{
     width: 25vw;
 }
 
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
+
+    #Ressource{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        margin-top: -6vh;
+    }
+
+    #Ressource h1{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    #RessourcePC{
+        display: flex;
+        justify-content: space-around;
+
+        width: 80vw;
+    }
+
+    #protocole{
+        width: 35vw;
+    }
+
+    #Cours{
+        width: 35vw;
+    }
+}
+
 /* Absences */
 
 #Absences{
@@ -1379,6 +1417,78 @@ a{
     flex-direction: column;
     color: black;
     margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 768px) {
+
+    #SemPC{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    #SemMob{
+        display: none;
+    }
+
+    #SemPC{
+        width: 20vw;
+    }
+    #BonPlans{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 13vw;
+        color: black;
+        height: 100%;
+
+    }
+
+    #BonPlans h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #Plan{
+        display: flex;
+        width: 75vw;
+        justify-content: space-between;
+        height: 80vh;
+    }
+
+    #PlanJour{
+        align-items: flex-start;
+    }
+
+    #PlanJour h2{
+        margin-left: 3vw;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    #PlanJour img{
+        width: 17vw;
+    }
+
+    #PlanJour a{
+        display: flex;
+        flex-direction: row;
+        width: 50vw;
+        justify-content: flex-start;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    #PlanJour a p{
+        margin-left: 2vw;
+
+    }
+
+    
 }
 
 
