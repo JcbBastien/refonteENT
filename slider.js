@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mouvement > maxMouvement) {
         retourDebut();
       } else {
-        photosWrapper.style.left = mouvement * -38  + "vw";
+        photosWrapper.style.left = mouvement * -25  + "vw";
       }
     }
     
@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mouvement < minMouvement) {
         retourFin();
       } else {
-        photosWrapper.style.left = mouvement * -38 + "vw";
+        photosWrapper.style.left = mouvement * -25 + "vw";
       }
     }
     
     function retourFin () {
       mouvement = maxMouvement;
-      photosWrapper.style.left = mouvement * -38  + "vw";
+      photosWrapper.style.left = mouvement * -25  + "vw";
     }
   
     

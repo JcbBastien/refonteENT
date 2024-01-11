@@ -111,15 +111,15 @@ $currentDate = date("d-m-Y");
                 <div id="PCmsg">
                     <div id="msgPV">
                         <p><strong>A.Leroy</strong> - Etude</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                     </div>
                     <div id="msgPV">
                         <p><strong>A.Leroy</strong> - Etude</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                     </div>
                     <div id="msgPV">
                         <p><strong>A.Leroy</strong> - Etude</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        <p>Bonjour à tous, merci de prendre le temps de lire ce message.</p>
                     </div>
                 </div>
                 <div id="botBord"><a href="https://partage.univ-eiffel.fr/" target="_blank" id="ButtPC">Boîte de réception</a></div>
@@ -143,7 +143,7 @@ $currentDate = date("d-m-Y");
                                         <div class="card-data">
                                             <div>
                                                 <h5>INFORMATION : Fermeture de la Bibliothèque Georges Perec</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt elit, sed do eiusmod tempor incididunt</p>
+                                                <p>Nous vous informons que la Bibliothèque Georges Perec sera fermée temporairement pour des travaux de maintenance. Nous vous prions de nous excuser pour tout inconvénient et vous remercions de votre compréhension. Nous faisons de notre mieux pour assurer une réouverture rapide et vous tiendrons informés de toute évolution. Merci de votre collaboration.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,8 +152,7 @@ $currentDate = date("d-m-Y");
                                         <div class="card-data">
                                             <div>
                                                 <h5>Fermeture de la Bibliothèque  Georges Perec</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt elit, sed do eiusmod tempor incididunt</p>
-    
+                                                <p>Nous vous informons que la Bibliothèque Georges Perec sera fermée temporairement pour des travaux de maintenance. Nous vous prions de nous excuser pour tout inconvénient et vous remercions de votre compréhension. Nous faisons de notre mieux pour assurer une réouverture rapide et vous tiendrons informés de toute évolution. Merci de votre collaboration.</p>    
                                             </div>
                                         </div>
                                     </div>
